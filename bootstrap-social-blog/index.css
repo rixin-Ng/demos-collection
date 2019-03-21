@@ -1,0 +1,186 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    /*font-size: 0;*/
+}
+html,body{
+    background: #333;
+}
+.banner-top .navigation{
+    background: #021523;
+    height: 120px;
+}
+.navbar.navbar-default{
+    background: none;
+    border: none;
+    z-index: 100;
+    height: 108px;
+}
+.navbar-header{
+    color:#fff;
+}
+.navbar-header .glyphicon{
+    font-size: 30px;
+    margin-right: 10px;
+}
+.navbar-header h1{
+    display: inline-block;
+}
+.navbar-header p{
+    font-size: 20px;
+}
+.navbar-header .navbar-toggle{
+    /*border-color: #ddd;*/
+    margin-top: 15px;
+}
+.navbar-header .navbar-toggle .icon-bar{
+    background-color: #888;
+}
+.navbar .collapse{
+    border:none;
+    font: none;
+    color: none;
+    background: none;
+}
+.navbar .collapse .nav li a{
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+.navbar .collapse .nav li a:hover,
+.navbar .collapse .nav li a:focus {
+    color: orangered;
+    text-decoration: none;
+}
+
+@media screen and (max-width:767px){
+    .menu-list{
+        background: #021523;
+        text-align: center;
+    }
+}
+.about .main-wrap .main-left-img{
+    background: url("./images/ab.jpg") no-repeat center;
+    height: 640px;
+}
+.context-items h2 {
+
+	font-weight:600;
+	color: #000;
+	text-transform: uppercase;
+}
+.context-items {
+     padding:20px 0 20px 20px;
+}
+.context-items h5 {
+    font-size: 11px;
+    font-weight: 400;
+    color: #33cc99;
+    text-transform: uppercase;
+    padding: 0px 0px 10px 0px;
+    border-bottom: 1px solid #cec8c8;
+    margin: 0px 0px 15px 0px;
+    letter-spacing: 4px;
+}
+.context-items span {
+    font-weight: 600;
+    font-style: italic;
+    color: #ef5734;
+    font-size: 10px;
+    line-height: 20px;
+}
+.context-items p {
+  font-size:15px;
+  font-weight: 400;
+  color: #838383;
+  line-height: 20px;
+  margin-bottom:10px;
+}
+#gallery {
+    padding-top:20px;
+}
+.gallery-titile{
+    text-align: center;
+}
+.gallery-titile h3{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 100px;
+}
+.gallery .g-item{
+    position: relative;
+    padding: 0;
+}
+.g-item img{
+    width: 100%;
+}
+.g-item .bg-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(32,343,432,0.4);
+    transform: scale(0);
+    text-align: center;
+    transition: all 400ms linear;
+}
+.g-item:hover .bg-box{
+    transform: scale(1);
+}
+.g-item .bg-box span{
+    width:100%;
+    background-color: rgba(0,0,0,0.7);
+    font-size: 30px;
+    color:#fff;
+    vertical-align: center;
+    margin-top:33%;
+}
+.contact{
+    background: url('./images/banner.jpg')no-repeat center;
+    padding-top: 140px;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+    color: #fff;
+    text-align: center;   
+}
+.contact .cam{
+    text-align: center;
+}
+.contact  .top-cam span{
+    font-size: 40px;
+    color: #fff;
+}
+.contact .list-contact{
+    margin-top: 30px;
+}
+.contact .list-contact span{
+    font-size: 28px;
+}
+.contact .list-contact ul li{
+    display: inline-block;
+    padding: 0 20px;
+}
+.contact .list-contact ul li a.envelope{
+    color: deeppink;
+}
+.contact .list-contact ul li a.globe{
+    color: yellowgreen
+}
+.contact .list-contact ul li a.picture{
+    color: orangered
+}
+.contact .list-contact ul li a.phone-alt{
+    color: blue
+}
+
+.contact .list-contact ul li a:hover {
+	opacity:0.6;
+}
+.contact p{
+    font-size: 16px;
+    margin-top: 10px;
+}

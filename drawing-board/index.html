@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./index.css">
+    <title>画板</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <canvas class="canvas" width="700px" height="340px"></canvas>
+        <ul class="btnList">
+            <li><input type="color" class="colorChange"></li>
+            <li><input type="button" class="clearScreen" value="清屏"></li>
+            <li><input type="button" class="eraser" value="橡皮擦"></li>
+            <li><input type="button" class="revoke" value="撤销"></li>
+            <li class="range"><input type="range" class="lineRange" min="1" max="20"></li>
+        </ul>
+    </div>
+
+
+
+    <script src="./jquery.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>

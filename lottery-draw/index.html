@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        
+        html,
+        body {
+            min-width: 850px;
+            height: 100%;
+            background: url('./sjb.jpg') no-repeat;
+            background-size: 100%;
+            overflow: hidden;
+            /*background-position: center;*/
+        }
+        
+        .wrapper {
+            margin: 50px auto;
+            text-align: center;
+            width: 70%;
+            font-size: 16px;
+            color: rebeccapurple;
+        }
+        
+        .count-down {
+            display: flex;
+            width: 100%;
+            min-width: 722px;
+            height: 60px;
+            line-height: 60px;
+            background-color: #fff;
+            text-align: center;
+            font-size: 30px;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .count-down p {
+            display: inline-block;
+            /*position: absolute;*/
+            width: 250px;
+            height: 60px;
+            line-height: 60px;
+            /*left: 5px;*/
+        }
+        
+        .count-down span {
+            /*position: absolute;*/
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            /*top: 5px;*/
+            display: inline-block;
+        }
+        
+        .count-down .case {
+            box-shadow: 30px 30px 19px -28px #B5B5B5 inset;
+        }
+        
+        .mainWrap {
+            max-width: 1000px;
+            min-width: 722px;
+            width: 100%;
+            text-align: center;
+            margin: 20px auto 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .mainWrap:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        .listLeft {
+            float: left;
+            width: 40%;
+            height: 400px;
+            text-align: center;
+        }
+        
+        .cjhd {
+            font-size: 40px;
+            margin: 40px auto;
+            padding-left: 10px;
+        }
+        
+        .name,
+        .num {
+            background-color: #fff;
+            width: 300px;
+            height: 50px;
+            margin: 40px auto;
+            color: black;
+            line-height: 50px;
+            font-size: 24px;
+            text-align: left;
+            padding-left: 10px;
+        }
+        
+        .listRight {
+            float: left;
+            width: 300px;
+            height: 400px;
+            margin-left: 50px;
+            margin-top: 20px;
+            background-color: #fff;
+        }
+        
+        .zjmd {
+            text-align: center;
+            margin: 20px;
+            font-size: 24px;
+            line-height: 40px;
+        }
+        
+        .list div{
+            font-size: 16px;
+            color: black;
+            line-height: 30px;
+            text-align: left;
+            padding-left: 40px;
+        }
+    </style>
+    <title>大转盘</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="count-down">
+            <p>距离开奖还有：</p>
+            <span class="day case"></span>
+            <span class="_day">天</span>
+            <span class="hour case"></span>
+            <span class="_hour">时</span>
+            <span class="min case"></span>
+            <span class="_min">分</span>
+            <span class="sec case"></span>
+            <span class="_sec">秒</span>
+        </div>
+        <div class="mainWrap">
+            <div class="listLeft">
+                <p class="cjhd">抽奖活动</p>
+                <div class="name">姓名</div>
+                <div class="num">电话</div>
+            </div>
+            <div class="listRight">
+                <p class="zjmd">中奖名单</p>
+                <div class="list"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./jquery.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.wrap{
+    width: 500px;
+    margin: 200px auto 0;
+    text-align: center;
+}
+.prePage,
+.sNum,
+.nextPage{
+    display: inline-block;
+    border: 1px solid #ddd;
+    color: #428bca;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.current{
+    display: inline-block;
+    border: 1px solid #ddd;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: #428bca;
+}
+.dot{
+    display: inline-block;
+    color: #ccd5e2;
+    margin-right: 5px;
+}
+.disabled{
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    color: #bfbfbf;
+    background-color: #f2f2f2;
+}

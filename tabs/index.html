@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        .wrap {
+            width: 400px;
+            margin: 100px auto 0;
+        }
+
+        .tabs {
+            text-align: center;
+            width: 100%;
+            /* height: 30px; */
+            line-height: 30px;
+            background-color: #777;
+
+        }
+
+        .tabs a {
+            display: inline-block;
+            height: 100%;
+            padding: 5px 10px;
+            vertical-align: middle;
+            color: azure;
+        }
+
+        .tabs a:hover {
+            color: orangered;
+        }
+
+        .content {
+            border: 1px solid #555;
+            padding: 10px;
+            min-height: 300px;
+        }
+
+        .active {
+            font-weight: 600;
+            border-bottom: 1px solid orange;
+        }
+        .cont{
+            display: none;
+        }
+        .cont:first-child{
+            display: block;
+        }
+    </style>
+    <title>tabs</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="tabs">
+            <a class="active" href="javaScript:void(0)">新闻喜讯</a>
+            <a href="javaScript:void(0)">邓哥奇遇</a>
+            <a href="javaScript:void(0)">恐惧恶魔</a>
+            <a href="javaScript:void(0)">道德任性</a>
+        </div>
+        <div class="content">
+            <div class="cont">新闻喜讯新闻喜讯新闻喜讯新闻喜讯新闻喜讯新闻喜讯</div>
+            <div class="cont">邓哥奇遇邓哥奇遇邓哥奇遇邓哥奇遇邓哥奇遇邓哥奇遇</div>
+            <div class="cont">恐惧恶魔恐惧恶魔恐惧恶魔恐惧恶魔恐惧恶魔恐惧恶魔</div>
+            <div class="cont">道德任性道德任性道德任性道德任性道德任性道德任性</div>
+        </div>
+    </div>
+
+
+    <script>
+        var tabs = document.getElementsByTagName('a');
+        var cont = document.getElementsByClassName('cont');
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].index = i;
+            tabs[i].onclick = function () {
+                for (var j = 0; j < tabs.length; j++) {
+                    tabs[j].className = '';
+                    cont[j].style.display = 'none';
+                }
+                this.className = 'active';
+                cont[this.index].style.display = 'block';
+
+            }
+        }
+    </script>
+</body>
+
+</html>

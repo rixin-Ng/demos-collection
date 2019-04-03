@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        .wrap {
+            width: 400px;
+            margin: 100px auto 0;
+        }
+
+        .tabs {
+            text-align: center;
+            width: 100%;
+            line-height: 30px;
+            background-color: #777;
+        }
+
+        .tabs li {
+            display: inline-block;
+            height: 100%;
+            padding: 5px 10px;
+            vertical-align: middle;
+        }
+
+        li a {
+            color: azure;
+        }
+
+        .tabs a:hover {
+            color: orangered;
+        }
+
+        .contents {
+            border: 1px solid #555;
+            padding: 10px;
+            min-height: 300px;
+        }
+
+        .cont {
+            display: none;
+        }
+
+        .tabs a.active {
+            font-weight: 600;
+            border-bottom: 1px solid orange;
+        }
+
+        .current {
+            display: block;
+        }
+    </style>
+    <title>jqTabs</title>
+</head>
+
+<body>
+    <div class="wrap"></div>
+
+
+    <script src="jquery.js"></script>
+    <script>
+        (function ($) {
+            var obj = {
+                init: function (options) {
+                    var options = options || {};
+                    this.args = $.extend({
+                        tabList: ['a', 'b', 'c'],
+                        conList: ['<div class="cont">a</div>',
+                            '<div class="cont">b</div>',
+                            '<div class="cont">c</div>']
+                    }, options)
+                    this.bindEvent();
+                    this.createDom();
+                },
+                createDom: function () {
+                    var self = this;
+                    var args = self.args;
+                    var wrap = args.father;
+                    var len = args.tabList.length;
+                    var ul = $('<ul class="tabs"></ul>');
+                    var content = $('<div class="contents"></div>');
+                    var liStr = '', conStr = '';
+                    for (var i = 1; i < len + 1; i++) {
+                        liStr += '<li><a href="javaScript:void(0)" title="tab' + i + '">' + args.tabList[i - 1] + '</a></li>'
+                    }
+                    wrap.append(ul.html(liStr))
+                        .append(content.html(args.conList))
+                    for (var j = 0; j < len; j++) {
+                        $($('.cont')[j]).attr('id', 'tab' + (j + 1))
+                    }
+                    ul.find('a').eq(0).addClass('active');
+                    content.find('.cont').eq(0).addClass('current');
+                },
+                bindEvent: function () {
+                    $('.wrap').on('click', 'li', function (e) {
+                        console.log(22)
+                        e.preventDefault();
+                        var id = $(this).find('a').attr('title');
+                        $('.active').removeClass('active');
+                        $(this).find('a').attr('class', 'active');
+                        $('.current').removeClass('current');
+                        $('#' + id).addClass('current');
+                    })
+                }
+            }
+
+
+
+
+
+
+
+            $.fn.extend({
+                tab: function (options) {
+                    options.father = this || $('body');
+                    obj.init(options);
+                }
+            })
+
+
+        }(jQuery))
+
+    </script>
+    <script>
+        $('.wrap').tab({
+            tabList: ['新闻喜讯', '邓哥奇遇', '恐惧恶魔', '道德任性'],
+            conList: ['<div class="cont">新闻喜讯新闻喜讯新闻喜讯新闻喜讯新闻喜讯新闻喜讯</div>',
+                '<div class="cont">邓哥奇遇邓哥奇遇邓哥奇遇邓哥奇遇邓哥奇遇邓哥奇遇</div>',
+                '<div class="cont">恐惧恶魔恐惧恶魔恐惧恶魔恐惧恶魔恐惧恶魔恐惧恶魔</div>',
+                '<div class="cont">道德任性道德任性道德任性道德任性道德任性道德任性</div>'
+            ]
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    height: 0;
+}
+.wrap{
+    width: 300px;
+    height: 230px;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
+    margin: 50px auto 0;
+    padding: 20px;
+}
+.input{
+    height: 50px;
+}
+.input input{
+    height: 15px;
+    width: 230px;
+    border: 1px solid #cccccc;
+    outline: none;
+    padding: 15px;
+    border-radius: 5px;
+}
+.icon{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url('./images/false.png');
+    background-size: 100%;
+    vertical-align: middle;
+    margin-left: 3px;
+    display: none;
+}
+.code{
+    width: 100%;
+    height: 100px;
+}
+p{
+    height: 20px;
+    font-size: 14px;
+    color: tomato;
+    padding: 10px 0;
+    display: none;
+}
+/* #code{
+    display: inline-block;
+    margin-top: 10px;
+    width: 260px;
+    height: 70px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: url('./images/bg.jpg') no-repeat;
+    vertical-align: middle;
+    color: #ccc;
+    font-size: 36px;
+    text-align: center;
+}
+#code span{
+    display: inline-block;
+    height: 100%;
+    line-height: 70px;
+
+} */
+.code{
+    width: 100%;
+    height: 100px;
+}
+canvas{
+    margin-top: 10px;
+    width: 260px;
+    height: 70px;
+    border-radius: 10px;
+    background: url('./images/bg.jpg') no-repeat;
+    background-size: 100%;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+.refresh{
+    display: inline-block;  
+    width: 30px;
+    height: 30px;
+    background: url('./images/update.png') no-repeat;
+    background-size: 100%; 
+    vertical-align: middle;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.submit{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background: #62b900;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}

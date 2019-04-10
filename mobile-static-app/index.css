@@ -40,7 +40,7 @@ html{
 
 /* header */
 #header{
-    font-size: 0;
+    /* font-size: 0; */
     height: calc(176px/3);
     background: #46ae00;
     vertical-align: middle;
@@ -85,7 +85,7 @@ html{
 }
 /* scroll */
 #scroll{
-    overflow: scroll;
+    overflow: auto;
     position: absolute;
     top: calc(176px/3);
     max-width: 750px;
@@ -95,14 +95,15 @@ html{
 /* banner */
 #banner{
     position: relative;
+    height: 5.41rem;
 }
 #banner .banner a{
     display: block;
-    width: 100vw;
-    height: 5.41rem;
+    width: 100%;
+   
 }
 #banner .banner img{
-    height: 5.41rem;
+    width: 100%;
 }
 #banner .control{
     width: 100%;

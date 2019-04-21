@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#aed8e6, #f0f3f6);
+        }
+        .box{
+            margin: 0 auto;
+            border: 2px solid #ccc;
+            background: #fff;
+            width: 800px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        span{
+            position: absolute;
+            white-space: nowrap;
+        }
+        .control{
+            margin: 5px auto;
+            width: 800px;
+            height: 40px;
+        }
+        .control input,
+        .btn{
+            padding: 0 10px;
+            border: 1px solid #aaa;
+            height: 30px;
+            line-height: 30px;
+            width: 300px;
+        }
+        .btn{
+            width: 60px;
+            margin-left: 20px;
+            vertical-align: bottom;
+        }
+    
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box"></div>
+        <div class="control">
+            <input type="text" id="input" placeholder="say some thing...">
+            <button class="btn">send</button>
+        </div>
+    </div>
+
+    <script>
+        var input = document.getElementById('input');
+        var btn = document.getElementsByClassName('btn')[0];
+        var box = document.getElementsByClassName('box')[0];
+        btn.onclick = sendText;
+        document.onkeydown = function (e) {
+            var e = event || window.event;
+            if (e.keyCode == 13) {
+                // console.log(e)
+                sendText()
+            }
+        }
+        input.onclick = function () {
+            this.value = '';
+        }
+        function sendText() {
+            var val = input.value;
+            if (val.trim() == '') {
+                alert('请输入内容!');
+            } else {
+                var oSpan = document.createElement("span");
+                oSpan.innerText = val;
+                var ofontSize = Math.floor(Math.random() * 16) + 16;
+                var oColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+                var minT = box.offsetTop;
+                var maxT = box.clientHeight - ofontSize;
+                var oTop = Math.floor(Math.random()* (maxT - minT)) + minT;
+                var left = 800;
+                oSpan.style.top = oTop + "px";
+                oSpan.style.color = oColor;
+                oSpan.style.fontSize = ofontSize + 'px';
+                var timer = setInterval(function () {
+                    oSpan.style.left = left + 'px';
+                    if (left >= -oSpan.offsetWidth ) {
+                        left -= 2;
+                        box.appendChild(oSpan);
+                    }else{
+                        clearInterval(timer);
+                        oSpan.parentNode.removeChild(oSpan);
+                    }
+                }, 1)
+            }
+        }
+    </script>
+</body>
+
+</html>

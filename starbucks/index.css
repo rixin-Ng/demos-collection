@@ -1,0 +1,234 @@
+@media (max-width: 640px) {
+    html {
+      font-size: 59%; 
+    } 
+  }
+@media (min-width: 641px) {
+    html {
+      font-size: 59%; 
+    } 
+  }
+@media (min-width: 1025px) {
+    html {
+      font-size: 62.5%; 
+    } 
+  }
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+a:focus{
+  text-decoration: none;
+}
+/* 左边 */
+.navStyle{
+  height: 48px;
+  padding: 16px;
+  box-sizing: content-box;
+}
+@media (min-width:992px){
+  .navStyle{
+    padding: 24px!important;
+    height: 48px;
+    box-sizing: content-box;
+  }
+}
+.navStyle a{
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.navStyle .logo{
+  width: 36px;
+}
+.hamburger{
+  margin-top: 4px;
+}
+/* 登录 */
+.login{
+  padding: 0px 24px 0 84px;
+  height: calc(100vh - 96px);
+}
+@media (max-width:991px){
+  .login{
+    height: auto;
+    padding: 0 16px 0 16px;
+  }
+}
+@media (max-width:575px){
+  .login{
+    height: auto;
+    padding: 16px 16px 0 16px;
+  }
+}
+.login span{
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+.login a{
+  display: inline-block;
+  height: 31px;
+  line-height: 31px;
+  box-sizing: content-box;
+  vertical-align: top;
+  margin-right: 24px;
+}
+.login img{
+  margin-top: -6px;
+}
+.login .loginText{
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #00A862;
+}
+.login button{
+  font-weight: 500;
+  border-radius: 48px;
+  line-height: 25.6px;
+  font-size: 16px;
+  padding: 2px 12px;
+}
+/* carousel */
+.carouselmb{
+  padding-bottom: 24px;
+}
+.ad{
+  padding: 24px 12px;
+}
+@media (max-width: 576px) {
+  .ad{
+    padding: 0 12px;
+  }
+}
+/* 星享俱乐部 */
+.star h2{
+  font-size: 2.2rem;
+}
+.star a{
+  line-height: 32px;
+  font-size: 1.6rem;
+}
+.star a>span{
+  color: #c2a661;
+}
+.star button{
+  font-size: 1.6rem;
+  border-radius: 48px;
+  line-height: 25.6px;
+  padding: 2px 12px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .star{
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 768px;
+    width: 100%;
+  }
+}
+@media (max-width: 575px){
+  .star{
+    text-align: center;
+  }
+}
+/* 星巴克精选 */
+.choice>div{
+  box-sizing: border-box;
+}
+.choice h2{
+  font-size: 2rem;
+}
+.choice>div p{
+  font-size: 1.6rem;
+}
+.choice ul{
+  padding-top: 48px;
+}
+.choice a{
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.choice img{
+  width: 83%;
+  margin-top: -35px;
+}
+.choice a p:nth-child(2){
+  font-size: 1.6rem;
+}
+.choice a p:nth-child(3){
+  font-size: 1.4rem;
+  line-height: 24px;
+}
+.choice .more{
+  color: #c2a661;
+  font-size: 1.2rem;
+  opacity: 0.7;
+  margin-bottom: 24px;
+}
+@media (max-width: 575px){
+  .choice li a{
+    margin-bottom: 48px;
+  }
+}
+/* 咖啡星讲堂 */
+.scroll{
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 768px;
+    width: 100%;
+}
+.teach h2{
+  font-size: 2.2rem;
+}
+.teach p{
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+}
+.teach{
+  overflow: hidden;
+  padding-bottom: 40px;
+  /* margin-bottom: 40px; */
+}
+.teach ul{
+  width: 3000px;
+}
+.teach li{
+  width: 288px;
+  height: 225px;
+  position: relative;
+  float: left;
+  margin-right: 16px;
+  border-radius: 2px;
+  /* border: 1px solid rgba(0,0,0,0.12); */
+  box-shadow: 0 1px 1px 1px rgba(0,0,0,0.12);
+}
+.teach li img{
+  width: 100%;
+  height: 168px;
+}
+.teach li span{
+  position: absolute;
+  top: 10px;
+  left: 0;
+  color: #fff;
+  background: #C2A661;
+  font-size: 1.4rem;
+}
+.teach li .scrollTitle{
+  font-size: 1.6rem;
+  line-height: 48px;
+  color: rgba(0, 0, 0, 0.8);
+  padding-left: 20px;
+}
+@media (max-width: 575px){
+  .teach{
+    margin-bottom: 40px;
+  }
+}
+
+.footer{
+  box-shadow: 0 1px 1px 2px rgba(0,0,0,0.12);
+}

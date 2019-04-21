@@ -169,7 +169,6 @@
             position: relative;
             line-height: 0.9rem;
         }
-        @media screen and (-webkit-min-device-pixel-radio : 2){
             h3::before{
             content: "";
             display: inline-block;
@@ -180,11 +179,10 @@
             border-radius: 0.05rem;
             vertical-align: middle;    
             }
-        }
-        
         h3 span{
             vertical-align: middle;
         }
+        @media screen and (-webkit-min-device-pixel-ratio : 2){
         h3::after{
             content:"";
             position: absolute;
@@ -196,6 +194,7 @@
             left: 0;
             transform: scaleY(0.5);
         }
+    }
         article{
             position: relative;
             width: 100%;

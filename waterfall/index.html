@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .wrap {
+            margin: 0 auto;
+            width: 90%;
+            border: 1px solid black;
+            position: relative;
+        }
+        img{
+            transition: 500ms;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+
+    </div>
+
+
+
+    <script src="index.js"></script>
+    <script>
+        var imgSrc = [];
+        for(var i = 0; i < 41; i++){
+            imgSrc.push('./img/' + i + '.jpg');
+        }
+        
+        createImg({
+            wrap: document.getElementsByClassName('wrap')[0],
+            imgSrc
+        })
+    </script>
+
+</body>
+
+</html>

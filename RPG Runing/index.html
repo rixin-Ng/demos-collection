@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .wrap{
+            position: relative;
+        }
+        .control{
+            margin: 50px 20px;
+            display: grid;
+            grid-template-columns: 40px 40px 40px;
+            grid-template-rows: 30px 30px 30px;
+            justify-content:end;
+            grid-gap: 10px;
+        }
+        input{
+            height: 100%;
+            width: 100%;
+            border: none;
+            background: orange;
+            color: #fff;
+            border-radius: 20%;
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+        }
+        img{
+            display: block;
+            position: absolute;
+            width: 80px;
+            left: 50%;
+
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="control">
+            <li><input id="lu" type="button" value="左上"></li>
+            <li><input id="up" type="button" value="向上"></li>
+            <li><input id="rightUp" type="button" value="右上"></li>
+            <li><input id="left" type="button" value="向左"></li>
+            <li><input id="stop" type="button" value="停止"></li>
+            <li><input id="right" type="button" value="向右"></li>
+            <li><input id="ld" type="button" value="左下"></li>
+            <li><input id="down" type="button" value="向下"></li>
+            <li><input id="rd" type="button" value="右下"></li>
+        </ul>
+        <img src="./images/down-0.png" alt="">
+    </div>
+
+
+
+    <script src="./index.js"></script>
+</body>
+</html>

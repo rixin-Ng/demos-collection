@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+html,body{
+    background: #eee;
+}
+.wrap{
+    position: relative;
+    margin: 100px auto 0;
+    width: 90%;
+    height: 100px;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+.wrap img{
+    position: absolute;
+    top: -52px;
+    right: 0;   
+    width: 200px;
+    cursor: pointer;
+} 
+.mask{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    background: rgba(0, 0, 0, 0.3);
+}
+.box{
+    margin: 50px auto;
+    width: 300px;
+    height: 500px;
+    background: #fff;
+    border-radius: 10px;
+}
+.head{
+    box-sizing: border-box;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+.head p{
+    display: inline-block;
+}
+.head i{
+    font-style: inherit;
+    display: block;
+    float: right;
+    color: #ccc;
+    cursor: pointer;
+}
+.main{
+    width: 100%;
+    margin: 0 auto;
+}
+.iconwrap{
+    margin: 10px auto;
+    background: #dbf0fa;
+    width: 250px;
+}
+.main .imgIcon{
+    margin: 0 auto;
+    width: 186px;
+    height: 188px;
+    background:url('./img/ico.png') 0 -120px no-repeat;
+}
+.main button{
+    display: block;
+    position: relative;
+    top: -40px;
+    left: 5px;
+    margin: 0 auto;
+    width: 240px;
+    height: 34px;
+    border: none;
+    background: url('./img/ico.png') 0 0 no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.main button:hover{
+    background-position: 0 -34px;
+}
+.iconwrap p::before,
+.iconwrap p::after{
+    width: 30px;
+    height: 5px;
+    background: #ccc;
+    display: inline-block;
+    content: '';
+    margin: 0 5px;
+    vertical-align: middle;
+}
+.iconwrap p{
+    position: relative;
+    margin-top: -30px;
+    font-size: 10px;
+    color: #aaa;
+    text-align: center;
+}
+ul{
+    margin: 10px 20px;
+    height: 196px;
+    overflow: hidden;
+}
+ul li{
+    font-size: 12px;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+li.active{
+    height: 20px;
+    line-height: 20px;
+    background: url("./img/ico.png") 0 -500px;
+    background-size: 100%;
+}

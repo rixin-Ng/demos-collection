@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    .calendar{
+        background: #808dda;
+        width: 600px;
+        /* height: 400px;  */
+        padding: 1rem;
+        text-align: center;
+    }
+    .cal-head{
+        text-align:center;
+    }
+    .cal-head select{
+        border-radius: 4px;
+    }
+    .cal-head span{
+        color: #fff;
+    }
+    .title{
+        color: #fff;
+        display: grid;
+        grid-template-columns: repeat(7,1fr);
+        margin: 1rem 0;
+    }
+    .cal-main{
+        color: #fff;
+        display: grid;
+        grid-template-columns: repeat(7,1fr);
+        place-items: center;
+        grid-row-gap: 15px;
+    }
+    .cal-main span{
+        line-height: 30px;
+    }
+    .cal-main span.active{
+        padding: 0 5px;
+        text-align: center;
+        color: #808dda;
+        background: #fff;
+        border-radius: 50%;
+    }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="calendar">
+        <div class="cal-head">
+            <select name="year" id="selYear">
+                <option value="2019">2019</option>
+            </select>
+            <span>年</span>
+            <select name="month" id="selMonth">
+               <option value="4">4</option>
+            </select>
+            <span>月</span>
+            <button>今天</button>
+        </div>
+        <div class="title">
+            <span>一</span>
+            <span>二</span>
+            <span>三</span>
+            <span>四</span>
+            <span>五</span>
+            <span>六</span>
+            <span>日</span>
+        </div>
+        <div class="cal-main">
+            
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

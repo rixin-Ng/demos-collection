@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            border: none;
+        }
+        .wrap {
+            margin: 0 auto;
+            width: 750px;
+            height: 550px;
+        }
+
+        .bg {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: url('./images/bg_canvas.png') no-repeat;
+            background-size: 100% 100%;
+            cursor: url('./images/hammer.png'), auto;
+        }
+
+        .score,
+        .live {
+            position: absolute;
+            color: #fff;
+            top: 200px;
+            right: 200px;
+            font-size: 20px;
+        }
+
+        .score span {
+            vertical-align: top;
+            margin-left: 10px;
+        }
+
+        .live {
+            display: inline-block;
+            right: 100px;
+        }
+
+        .cave {
+            color: transparent;
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            width: 140px;
+            height: 125px;
+            overflow: hidden;
+        }
+
+        .mouse {
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            overflow: hidden;
+            left: 0;
+            top: 20px;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            transition: top 0.5s;
+            overflow: hidden;
+        }
+        @keyframes moveTop{
+            from{
+                top: 70px;
+            }
+            to{
+                top:20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="bg">
+            <div class="score">
+                <img src="./images/score.png" alt="">
+                <span class="scoreNum"> 0</span>
+            </div>
+            <div class="live">
+                <span>生命：</span>
+                <span class="liveNum">0</span>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

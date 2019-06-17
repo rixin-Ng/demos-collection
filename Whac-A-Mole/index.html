@@ -7,50 +7,56 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        *{
-            border: none;
+        * {
+            margin: 0;
+            padding: 0;
         }
+
         .wrap {
-            margin: 0 auto;
+            position: relative;
             width: 750px;
-            height: 550px;
+            height: 600px;
+            margin: 50px auto 0;
         }
 
         .bg {
             position: relative;
-            width: 100%;
-            height: 100%;
-            background: url('./images/bg_canvas.png') no-repeat;
-            background-size: 100% 100%;
-            cursor: url('./images/hammer.png'), auto;
+            width: 750px;
+            height: 550px;
+            background: url('./images/bg_canvas.png');
+            cursor: url("./images/hammer.png"), auto;
         }
 
-        .score,
-        .live {
+        .score {
             position: absolute;
-            color: #fff;
-            top: 200px;
-            right: 200px;
-            font-size: 20px;
+            min-width: 100px;
+            height: 30px;
+            left: 420px;
+            top: 180px;
         }
 
-        .score span {
+        .life {
+            position: absolute;
+            top: 180px;
+            right: 92px;
+        }
+
+        .score span,
+        .life span {
+            color: #fff;
+            line-height: 30px;
+            font-size: 24px;
             vertical-align: top;
+            
+        }
+        .score span{
             margin-left: 10px;
         }
-
-        .live {
-            display: inline-block;
-            right: 100px;
-        }
-
         .cave {
-            color: transparent;
-            background-color: transparent;
-            border: none;
             position: absolute;
             width: 140px;
             height: 125px;
+            /* border:1px solid #000; */
             overflow: hidden;
         }
 
@@ -66,12 +72,14 @@
             transition: top 0.5s;
             overflow: hidden;
         }
-        @keyframes moveTop{
-            from{
+
+        @keyframes moveTop {
+            0% {
                 top: 70px;
             }
-            to{
-                top:20px;
+
+            100% {
+                top: 20px;
             }
         }
     </style>
@@ -84,9 +92,9 @@
                 <img src="./images/score.png" alt="">
                 <span class="scoreNum"> 0</span>
             </div>
-            <div class="live">
+            <div class="life">
                 <span>生命：</span>
-                <span class="liveNum">0</span>
+                <span class="lifeNum">0</span>
             </div>
         </div>
     </div>

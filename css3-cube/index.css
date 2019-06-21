@@ -118,7 +118,7 @@ span.dot{
 }
 span.in-back{
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
 }
 span.in-back>.dot2{
     align-self: flex-end;

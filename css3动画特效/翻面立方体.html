@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=q">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>翻面立方体</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrap{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+            perspective: 600;
+        }
+        .box{
+            top: 50px;
+            left: 50px;
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            /*transform:  rotate3d(1,1,0,-30deg) ;*/
+            transform-origin: center center -100px;
+            animation: turn 5s linear infinite;
+        }
+        .box .item{
+            position: absolute;
+            opacity: 0.5;            
+            height: 200px;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+            font-size: 24px;
+            color: #fff;
+            border-radius: 50px;
+            transform-origin: center center -100px;
+        }
+        .item1{
+            background-color: deeppink;
+             transform: rotatey(0deg); 
+        }
+         .item2{
+            background-color: lawngreen;
+            transform: rotatex(90deg);
+        }
+         .item3{
+            background-color: orange;
+              transform: rotatex(180deg);
+        }
+         .item4{
+            background-color: yellow;
+              transform: rotatex(-90deg);
+        }
+         .item5{
+            background-color: green;
+              transform: rotatey(-90deg);
+        }
+         .item6{
+            background-color: cornflowerblue;
+              transform: rotatey(90deg);
+        }
+        @keyframes turn{
+            0%{
+                    transform: rotatex(0deg) 
+            }
+            50%{
+                transform:rotatex(-720deg) 
+            }
+             51%{
+                transform: rotatey(0deg) 
+            }
+            100%{
+                      transform:rotatey(-720deg)
+            }
+        }
+    </style>
+</head>
+<body>
+     <div class="wrap">
+         <div class="box">
+             <div class="item item1">1</div>
+             <div class="item item2">2</div>
+             <div class="item item3">3</div>
+             <div class="item item4">4</div>
+             <div class="item item5">5</div>
+             <div class="item item6">6</div>
+         </div6
+     </div6
+</body6
+</html6

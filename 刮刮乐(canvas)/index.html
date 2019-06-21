@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        #myCanvas {
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <title>刮刮乐</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="300px" height="300px"></canvas>
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var ctx = canvas.getContext('2d');
+        var w = canvas.width;
+        var h = canvas.height;
+        var pointX, pointY;
+        var nowPointX, nowPointY;
+        var img = new Image();
+
+        function init() {
+            ctx.fillStyle = '#ccc';
+            ctx.fillRect(0, 0, w, h);
+
+            var r = Math.random();
+            if (r > 0.5) {
+                img.src = 'kity1.jpg'
+            } else {
+                img.src = 'kity2.jpg'
+            }
+
+            img.onload = function () {
+                canvas.style.backgroundImage = 'url(' + img.src + ')';
+                ctx.globalCompositeOperation = 'destination-out';
+                document.addEventListener('mousedown', downFunc, false)
+            }
+        }
+        init();
+        function downFunc(e) {
+            pointX = e.clientX - canvas.offsetLeft;
+            pointY = e.clientY - canvas.offsetTop;
+            canvas.addEventListener('mousemove', moveFunc, false);
+            document.addEventListener('mouseup', upFunc, false);
+        }
+        function moveFunc(e) {
+            nowPointX = e.clientX - canvas.offsetLeft;
+            nowPointY = e.clientY - canvas.offsetTop;
+            ctx.beginPath();
+            ctx.fillStyle = 'red';
+
+            ctx.moveTo(pointX, pointY);
+            ctx.lineTo(nowPointX, nowPointY);
+            ctx.lineWidth = 40;
+            ctx.stroke();
+
+            ctx.arc(nowPointX, nowPointY, 20, 0, Math.PI * 2, 0);
+            ctx.closePath();
+            ctx.fill();
+
+            pointX = nowPointX;
+            pointY = nowPointY;
+        }
+        function upFunc() {
+            document.removeEventListener('mouseup', upFunc, false);
+            canvas.removeEventListener('mousemove', moveFunc, false);
+            clearAll();
+        }
+        function clearAll() {
+            var d = ctx.getImageData(0, 0, w, h);
+            var len = d.data.length;
+            var c = 0;
+            for (var i = 3; i < len; i += 4) {
+                if (d.data[i] == 0){
+                    c++;
+                }
+            }
+            if (c > w * h * 0.75) {
+                ctx.clearRect(0, 0, w, h);
+            }
+        }
+    </script>
+</body>
+
+</html>
